@@ -9,5 +9,9 @@
     <Import_RootNamespace>List</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)IListDS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LinkList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Node.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SeqList.cs" />
   </ItemGroup>
 </Project>
