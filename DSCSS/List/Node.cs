@@ -4,7 +4,7 @@ using System.Text;
 
 namespace List
 {
-    public class Node<T>
+    public class Node<T> //单链表结点类的实现
     {
         private T data; //数据域 字段
         private Node<T> next; //引用域 字段                
@@ -49,6 +49,5 @@ namespace List
                 next = value;
             }
         }
-
     }
 }
