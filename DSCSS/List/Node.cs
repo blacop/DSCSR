@@ -13,7 +13,7 @@ namespace List
             data = val;
             next = p;
         }
-        public Node(Node<T> p)//构造器,重载形式的构造器，单参数构造，包含双参数构造
+        public Node(Node<T> p)//构造器,参数 引用域,重载形式的构造器，单参数构造，包含双参数构造
         {
             next = p;
         }        
