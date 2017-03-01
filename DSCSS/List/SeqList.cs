@@ -22,14 +22,14 @@ namespace List
                 data[index] = value;
             }
         }
-        public int Last
-        {//最后一个数据元素位置属性
+        public int Last //最后一个数据元素位置属性
+        {
             get
             {
                 return last;
             }
         }
-        public int Maxsize//字段用小写,属性用大写，字段是存储，属性是逻辑
+        public int Maxsize //字段用小写,属性用大写，字段是存储，属性是逻辑
         {//容量属性
             get
             {
@@ -40,7 +40,7 @@ namespace List
                 maxsize = value;
             }
         }
-        public SeqList(int size)
+        public SeqList(int size) //构造器
         {//构造器,相当于C里面结构体的Init方法，C#里面实例化对象后自动调用一次构造方法
          //bool Init(Sq &L);
          //C#的构造器是一次性内存开全,填充default value.
@@ -49,11 +49,11 @@ namespace List
             maxsize = size;
             last = -1;//cur工作指针
         }
-        public int GetLength()
-        {//求顺序表的长度
+        public int GetLength() //求顺序表的长度
+        {
             return last + 1;
         }
-        public void Clear()
+        public void Clear() //清空顺序表
         {//清空顺序表，void Clear();
          //初始条件：线性表L已存在。
          //操作结果：将L重置为空表。2
@@ -62,8 +62,8 @@ namespace List
          //操作结果：销毁线性表L。由GC自动处理
             last = -1;
         }
-        public bool IsEmpty()
-        {//判断顺序表是否为空
+        public bool IsEmpty() //判断顺序表是否为空
+        {
             if (last == -1)
             {
                 return true;
@@ -73,8 +73,8 @@ namespace List
                 return false;
             }
         }
-        public bool IsFull()
-        {//判断顺序表是否为满
+        public bool IsFull() //判断顺序表是否为满
+        {
             if (last == maxsize - 1)
             {
                 //last + 1 == i
@@ -86,7 +86,7 @@ namespace List
                 return false;
             }
         }
-        public void Append(T item)
+        public void Append(T item) //在顺序表的末尾添加新元素
         {//在顺序表的末尾添加新元素
          //初始条件：线性表L已存在且未满。
          //操作结果：将值为item的新元素添加到表的末尾。
@@ -108,7 +108,7 @@ namespace List
             }
             data[++last] = item;//last,cur指针 有修改++
         }
-        public void Insert(T item, int i)
+        public void Insert(T item, int i) //在顺序表的第i个数据元素的位置插入一个数据元素
         {//在顺序表的第i个数据元素的位置插入一个数据元素
          //初始条件：线性表L已存在，1<=i<=Length(L)+1.
          //操作结果：在L中第i个位置之前插入新的数据元素e，L的长度加1;  5
@@ -152,10 +152,9 @@ namespace List
             #endregion
             ++last;// ++cur_Ptr
         }
-        public T Delete(int i)
+        public T Delete(int i) //删除顺序表的第i个数据元素
         {//初始条件：线性表L已存在且非空，1<=i<=Length(L).
-         //操作结果：删除L的第i个数据元素，并用e返回其值，L的长度减1.6
-         //删除顺序表的第i个数据元素
+         //操作结果：删除L的第i个数据元素，并用e返回其值，L的长度减1.6         
             T tmp = default(T);//out value,赋值 defult value
             #region if IsEmpty()
             if (IsEmpty())
@@ -193,8 +192,8 @@ namespace List
             --last; //--cur_Ptr 
             return tmp; //return value
         }
-        public T GetElem(int i)
-        {//获得顺序表的第i个数据元素
+        public T GetElem(int i) //获得顺序表的第i个数据元素
+        {
          //初始条件：线性表L已存在，1<=i<=Length(L)。
          //操作结果：返回L中第i个数据元素的值。7
             if (IsEmpty() || (i < 1) || (i > last + 1))
@@ -204,8 +203,8 @@ namespace List
             }
             return data[i - 1];
         }
-        public int Locate(T value)
-        {//在顺序表中查找值为value的数据元素
+        public int Locate(T value) //在顺序表中查找值为value的数据元素
+        {
          //初始条件：线性表L已存在
          //返回L中第一个值为value的数据元素的位序。若这样的数据元素不存在，则返回值为0; 8
             #region if(IsEmpty())
@@ -256,7 +255,7 @@ namespace List
         //操作结果：依次对L的每个元素调用函数visit().一旦visit()失败,则操作失败。
         //Sq.h end
         */
-        public void Reverse()
+        public void Reverse() //倒置
         {//倒置，思路，1条数组对半切成2条数组，循环下标指针交换
             //0.5向上取整
             T tmp = default(T);
@@ -279,7 +278,7 @@ namespace List
         的那个顺序表中余下的数据元素赋给 Lc 即可。 Lc 的容量要能够容纳 La 和 Lb
         两个表相加的长度。
         */
-        public SeqList<int> Merge(SeqList<int> La, SeqList<int> Lb)
+        public SeqList<int> Merge(SeqList<int> La, SeqList<int> Lb) //升序合并
         {            
             SeqList<int> Lc = new SeqList<int>(La.Maxsize + Lb.Maxsize);//初始化Lc
             int i = j = 0; //temp Ptr 3个
@@ -323,7 +322,7 @@ namespace List
         如果不相同，则把该元素附加到顺序表 Lb 的末尾。
         从表中删除相同数据元素的算法的 C#实现如下：
         */
-        public SeqList<int> Purge(SeqList<int> La)
+        public SeqList<int> Purge(SeqList<int> La) //净化
         {
             SeqList<int> Lb = new SeqList<int>(La.Maxsize);//声明Lb
             Lb.Append(La[0]);//将a表中的第1个数据元素赋给b表
