@@ -11,18 +11,20 @@ namespace List
         private int maxsize; //顺序表的容量
         private T[] data; //数组，用于存储顺序表中的数据元素
         private int last; //cur工作指针,指示顺序表最后一个元素的位置
-        public T this[int index] //索引器=>属性=>逻辑,this=>实例化对象
-        {//索引器,this表示这个类的实例化对象，对this的存储和读取都通过索引器进行
+        public T this[int index] //索引器
+        {
+            //索引器,this=>实例化对象，实例化对象属性=>读写逻辑,
+            //索引器,this表示这个类的实例化对象，对this的存储和读取都通过索引器进行
             get
             {
-                return data[index];
+                return data[index];//数组名，下标
             }
             set
             {
                 data[index] = value;
             }
         }
-        public int Last //最后一个数据元素位置属性
+        public int Last //最后一个数据元素位置属性,last指针，只读
         {
             get
             {
@@ -40,14 +42,14 @@ namespace List
                 maxsize = value;
             }
         }
-        public SeqList(int size) //构造器
-        {//构造器,相当于C里面结构体的Init方法，C#里面实例化对象后自动调用一次构造方法
-         //bool Init(Sq &L);
-         //C#的构造器是一次性内存开全,填充default value.
-         //C的init,内存也开全
-            data = new T[size];
-            maxsize = size;
-            last = -1;//cur工作指针
+        public SeqList(int size) //构造器，参数，数据域数组长度
+        {
+            //没有无参构造器
+            //构造器,相当于C里面结构体的Init方法，C#里面实例化对象后自动调用一次构造方法
+            //构造器方法，实例化对象的时候，自动分配内存空间
+            data = new T[size]; //数据域数组
+            maxsize = size; //数据域 数组长度
+            last = -1;//cur 当前工作指针
         }
         public int GetLength() //求顺序表的长度
         {
@@ -154,7 +156,7 @@ namespace List
         }
         public T Delete(int i) //删除顺序表的第i个数据元素
         {//初始条件：线性表L已存在且非空，1<=i<=Length(L).
-         //操作结果：删除L的第i个数据元素，并用e返回其值，L的长度减1.6         
+         //操作结果：删除L的第i个数据元素，并用T返回其值，L的长度减1  
             T tmp = default(T);//out value,赋值 defult value
             #region if IsEmpty()
             if (IsEmpty())
@@ -163,7 +165,7 @@ namespace List
                 return tmp;
             }
             #endregion
-            #region if i is illegal
+            #region if (i < 1 || i > last + 1 //if i is illegal
             if (i < 1 || i > last + 1)
             {//legal condition :
              //0 +1 <= i <= last , because 大于last处为无效区
@@ -173,19 +175,19 @@ namespace List
                 return tmp;
             }
             #endregion
-            #region if (i==last + 1) means insert cur's position
+            #region if (i==last + 1) //删除的是最后一个元素 cur's position
             if (i == last + 1)
             {//cur's position
                 tmp = data[last--];
             }
             #endregion
-            #region else i is illegal, get value,move left
+            #region else //删除的不是最后一个元素,else i is legal, get value,move left
             else
             {//legal
                 tmp = data[i - 1];//先取值 get value first
-                for (int j = i - 1; j <= last; ++j)
+                for (int j = i; j < last + 1; ++j) //length == last +1 ; for (int j = i - 1; j <= last; ++j)
                 {
-                    data[j] = data[j + 1];//move left
+                    data[j - 1] = data[j]; //data[j] = data[j + 1];//move left               
                 }
             }
             #endregion
@@ -194,8 +196,9 @@ namespace List
         }
         public T GetElem(int i) //获得顺序表的第i个数据元素
         {
+            //获得顺序表的第i个数据元素
             //初始条件：线性表L已存在，1<=i<=Length(L)。
-            //操作结果：返回L中第i个数据元素的值。7
+            //操作结果：返回L中第i个数据元素的值。
             if (IsEmpty() || (i < 1) || (i > last + 1))
             {
                 Console.WriteLine("List is empty or Position is error!");
@@ -226,7 +229,7 @@ namespace List
             {//-1表示不存在
                 return -1;
             }//return order
-            return i;
+            return i + 1;
         }
         /*
         public bool Equals(T currentValue2)
