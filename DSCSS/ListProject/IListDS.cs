@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace List
+namespace ListProject
 {
     public interface IListDS<T>
     {
@@ -18,7 +20,7 @@ namespace List
         T Delete(int i); //删除操作 6
         T GetElem(int i); //取表元 7
         int Locate(T value);//按值查找 8
-        void Reverse();//倒置
+        // void Reverse();//倒置,可选
 /*ADT
 为了和.NET 框架中的接口 IList 相区分，在 IList 后面加了“DS”，“DS”
 表示数据结构。下面对线性表的基本操作进行说明。

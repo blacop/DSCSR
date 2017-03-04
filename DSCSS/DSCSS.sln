@@ -3,14 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "List", "List\List.shproj", "{868395EB-AB1A-4DB4-8D83-D0D6D35A505A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionProject", "CollectionProject\CollectionProject.csproj", "{2D9EF5C9-7A37-4FB5-AD09-FC8CDA927794}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Container", "Container\Container.shproj", "{D6D8F20F-0204-48C5-A080-C0BAE0914BE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListProject", "ListProject\ListProject.csproj", "{D49E4C82-231E-45F2-9D61-75CAE33CA552}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayListProject", "ArrayListProject\ArrayListProject.csproj", "{7636E813-49B6-4AB3-9363-DBE1DA767F3C}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		List\List.projitems*{868395eb-ab1a-4db4-8d83-d0d6d35a505a}*SharedItemsImports = 13
-		Container\Container.projitems*{d6d8f20f-0204-48c5-a080-c0bae0914be2}*SharedItemsImports = 13
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D9EF5C9-7A37-4FB5-AD09-FC8CDA927794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D9EF5C9-7A37-4FB5-AD09-FC8CDA927794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D9EF5C9-7A37-4FB5-AD09-FC8CDA927794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D9EF5C9-7A37-4FB5-AD09-FC8CDA927794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D49E4C82-231E-45F2-9D61-75CAE33CA552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D49E4C82-231E-45F2-9D61-75CAE33CA552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D49E4C82-231E-45F2-9D61-75CAE33CA552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D49E4C82-231E-45F2-9D61-75CAE33CA552}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7636E813-49B6-4AB3-9363-DBE1DA767F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7636E813-49B6-4AB3-9363-DBE1DA767F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7636E813-49B6-4AB3-9363-DBE1DA767F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7636E813-49B6-4AB3-9363-DBE1DA767F3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

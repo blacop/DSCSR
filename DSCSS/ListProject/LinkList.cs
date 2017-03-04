@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace List
+namespace ListProject
 {
     public class LinkList<T> : IListDS<T> //单链表类 LinkList<T>的实现说明如下所示。
     {
@@ -25,7 +27,7 @@ namespace List
             //Head其实也可以存放数据，C#的这本书里是这样
             head = null;//将head 作为字段//CLang:head.next = null;
         }
-        public int GetLength() //求单链表的长度
+        public int GetLength() //求单链表长度
         {
             Node<T> p = head;
             int len = 0;
@@ -35,6 +37,9 @@ namespace List
                 p = p.Next;
             }
             return len;
+            //时间复杂度分析：求单链表的长度需要遍历整个链表，
+            //所以，时间复杂度为
+            //O(n)， n 是单链表的长度。
         }
         public void Clear() //清空单链表,c#里面Clear和Destroy和二为一，Free()释放内存由GC垃圾清理自动完成
         {
@@ -55,9 +60,9 @@ namespace List
         {
             Node<T> q = new Node<T>(item);//insert node
             Node<T> p = new Node<T>();
-            if (head.next == null)
+            if (head.Next == null)
             {
-                head.next = q;//C#里的head是一个空Node,next引用指向后继结点
+                head.Next = q;//C#里的head是一个空Node,next引用指向后继结点
                 return;
             }
             p = head;
@@ -129,9 +134,8 @@ namespace List
         {
             if (IsEmpty() || i < 0)
             {
-                Console.WriteLine("Link is empty or Position is
-                error!");
-            return default(T);
+                Console.WriteLine("Link is empty or Position is error!");
+                return default(T);
             }
             Node<T> q = new Node<T>();
             if (i == 1)
@@ -195,26 +199,11 @@ namespace List
             int i = 1;
             while (!p.Data.Equals(value) && p.Next != null)
             {
-                P = p.Next;
+                p = p.Next;
                 ++i;
             }
             return i;
         }
-        public int GetLength() //求单链表长度的算法
-        {
-            Node<T> p = head;
-            int len = 0;
-            while (p != null)
-            {
-                ++len;
-                p = p.Next;
-            }
-            return len;
-            //时间复杂度分析：求单链表的长度需要遍历整个链表，
-            //所以，时间复杂度为
-            //O(n)， n 是单链表的长度。
-        }
-
     }
 }
 

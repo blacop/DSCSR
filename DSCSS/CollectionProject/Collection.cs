@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Collection
+namespace CollectionProject
 {
+    /*
     //ADT Collection,这是一个ADT抽象数据类型Collection
     public class Collection<T>
     {   //对于一个类如果不定义构造方法，编译器默认一个无参的构造方法
@@ -25,13 +28,7 @@ namespace Collection
         {
             return InnerList.Count;
         }
-        /*
-        //请对 Collection 类添加下列方法：
-        a.Insert
-        b.Contains
-        c.IndexOf
-        d. RemoveAt
-        */
+        
         public void Insert(Object item)
         {
             InnerList.Insert(item);
@@ -49,4 +46,13 @@ namespace Collection
             InnerList.RemoveAt(item);
         }
     }
+*/
+    /*
+            //请对 Collection 类添加下列方法：
+            a.Insert
+            b.Contains
+            c.IndexOf
+            d. RemoveAt
+            */
+
 }

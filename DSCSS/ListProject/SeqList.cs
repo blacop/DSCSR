@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace List
+namespace ListProject
 {
     public class SeqList<T> : IListDS<T>
     {
@@ -299,7 +301,8 @@ namespace List
         public SeqList<int> Merge(SeqList<int> La, SeqList<int> Lb) //升序合并
         {
             SeqList<int> Lc = new SeqList<int>(La.Maxsize + Lb.Maxsize);//初始化Lc
-            int i = j = 0; //temp Ptr 3个
+            int i = 0; //temp Ptr 3个
+            int j = 0;
             #region 两个表中都有数据元素
             while ((i <= (La.GetLength() - 1)) && (j <= (Lb.GetLength() - 1)))
             {

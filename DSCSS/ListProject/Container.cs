@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Container
+namespace ListProject
 {
+    /*
+    //ADT 这是一个ADT 泛型容器
     //泛型容器的完整 C#实现如下：
     public class Container<T>
     {
@@ -76,4 +80,5 @@ namespace Container
             return null;
         }
     }
+    */
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace List
+namespace ListProject
 {
     public class Node<T> //单链表结点类的实现
     {

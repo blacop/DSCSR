@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Threading;
 
-namespace Collection
-{//时间测试类
+namespace CollectionProject
+{
+    //时间测试类
     /*时间差方法
     public class Timing
     {
@@ -56,5 +59,5 @@ namespace Collection
         {
             return duration;
         }
-    }    
+    }
 }

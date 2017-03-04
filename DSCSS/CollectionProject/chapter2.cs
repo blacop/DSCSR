@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Collection
+namespace CollectionProject
 {
     class chapter2//测试用例
     {//测试用例
