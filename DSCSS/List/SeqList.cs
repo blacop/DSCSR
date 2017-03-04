@@ -194,8 +194,8 @@ namespace List
         }
         public T GetElem(int i) //获得顺序表的第i个数据元素
         {
-         //初始条件：线性表L已存在，1<=i<=Length(L)。
-         //操作结果：返回L中第i个数据元素的值。7
+            //初始条件：线性表L已存在，1<=i<=Length(L)。
+            //操作结果：返回L中第i个数据元素的值。7
             if (IsEmpty() || (i < 1) || (i > last + 1))
             {
                 Console.WriteLine("List is empty or Position is error!");
@@ -205,8 +205,8 @@ namespace List
         }
         public int Locate(T value) //在顺序表中查找值为value的数据元素
         {
-         //初始条件：线性表L已存在
-         //返回L中第一个值为value的数据元素的位序。若这样的数据元素不存在，则返回值为0; 8
+            //初始条件：线性表L已存在
+            //返回L中第一个值为value的数据元素的位序。若这样的数据元素不存在，则返回值为0; 8
             #region if(IsEmpty())
             if (IsEmpty())
             {
@@ -267,6 +267,21 @@ namespace List
                 data[len - i] = tmp;
             }
         }
+        //存储整数的顺序表的倒置的算法实现如下：
+        public void ReversSeqList(SeqList<int> L)
+        {
+            //重载方法
+            //倒置，思路，1条数组对半切成2条数组，循环下标指针交换
+            //0.5向上取整
+            int tmp = 0;//default(T) == 0;
+            int len = L.GetLength();
+            for (int i = 0; i <= len / 2; ++i)
+            {
+                tmp = L[i];
+                L[i] = L[len - i];
+                L[len - i] = tmp;
+            }
+        }
         /* 
         Merge() 升序合并
         有数据类型为整型的顺序表 La 和 Lb，其数据元素均按从小到大的升
@@ -279,7 +294,7 @@ namespace List
         两个表相加的长度。
         */
         public SeqList<int> Merge(SeqList<int> La, SeqList<int> Lb) //升序合并
-        {            
+        {
             SeqList<int> Lc = new SeqList<int>(La.Maxsize + Lb.Maxsize);//初始化Lc
             int i = j = 0; //temp Ptr 3个
             #region 两个表中都有数据元素

@@ -9,5 +9,6 @@
     <Import_RootNamespace>Container</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Container.cs" />
   </ItemGroup>
 </Project>

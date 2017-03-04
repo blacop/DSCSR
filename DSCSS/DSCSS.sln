@@ -5,9 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "List", "List\List.shproj", "{868395EB-AB1A-4DB4-8D83-D0D6D35A505A}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Container", "Container\Container.shproj", "{D6D8F20F-0204-48C5-A080-C0BAE0914BE2}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		List\List.projitems*{868395eb-ab1a-4db4-8d83-d0d6d35a505a}*SharedItemsImports = 13
+		Container\Container.projitems*{d6d8f20f-0204-48c5-a080-c0bae0914be2}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
