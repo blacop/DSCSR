@@ -15,13 +15,13 @@ namespace Collection
     {//3. 请使用 Timing 类来比较向 Collection 类和 ArrayList 类分别添加了 100000 个整数时的性能。
         static void Main()
         {
-            Collection<int> coll = new Collection<int>();
+            Collection<int> Coll = new Collection<int>();
             ArrayList<int> arrl = new ArrayList<int>();
-            Timing tcoll = new Timing();
-            tcoll.startTime();
+            Timing tColl = new Timing();
+            tColl.startTime();
             BuildArray(coll);
-            tcoll.stopTime();
-            Console.WriteLine("time (coll): " + tcoll.Result().TotalSeconds);
+            tColl.stopTime();
+            Console.WriteLine("time (tColl): " + tColl.Result().TotalSeconds);
             //----
             Timing tArrl = new Timing();
             tArrl.startTime();
