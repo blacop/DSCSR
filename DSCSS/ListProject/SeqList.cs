@@ -357,6 +357,8 @@ namespace ListProject
                     #region 有相同的数据元素
                     if (La[i].CompareTo(Lb[j]) == 0)
                     {
+                        //CompareTo()
+                        //Equal()
                         continue;//跳过
                     }
                     #endregion
