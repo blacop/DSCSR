@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListProject", "ListProject\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayListProject", "ArrayListProject\ArrayListProject.csproj", "{7636E813-49B6-4AB3-9363-DBE1DA767F3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSortProject", "BasicSortProject\BasicSortProject.csproj", "{DB4C066A-76C0-4EB2-8AA8-36C47C40D842}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7636E813-49B6-4AB3-9363-DBE1DA767F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7636E813-49B6-4AB3-9363-DBE1DA767F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7636E813-49B6-4AB3-9363-DBE1DA767F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB4C066A-76C0-4EB2-8AA8-36C47C40D842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4C066A-76C0-4EB2-8AA8-36C47C40D842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4C066A-76C0-4EB2-8AA8-36C47C40D842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4C066A-76C0-4EB2-8AA8-36C47C40D842}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

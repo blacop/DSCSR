@@ -46,6 +46,7 @@
     <Compile Include="chapter2.cs" />
     <Compile Include="chapter3.cs" />
     <Compile Include="Collection.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Timing.cs" />
   </ItemGroup>

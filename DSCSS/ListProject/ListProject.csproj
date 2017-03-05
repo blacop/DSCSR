@@ -43,13 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Container.cs" />
+    <Compile Include="LinkList\DbNode.cs" />
+    <Compile Include="LinkList\LinkList.cs" />
+    <Compile Include="SeqList\Container.cs" />
     <Compile Include="IListDS.cs" />
-    <Compile Include="LinkList.cs" />
-    <Compile Include="Node.cs" />
+    <Compile Include="LinkList\LinkListNH.cs" />
+    <Compile Include="LinkList\Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SeqList.cs" />
+    <Compile Include="SeqList\SeqList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
