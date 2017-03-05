@@ -184,12 +184,12 @@ namespace ListProject
             }
             #endregion
             #region else //删除的不是最后一个元素,else i is legal, get value,move left
-            else
-            {//legal
+            else //删除的不是最后一个元素
+            {
                 tmp = data[i - 1];//先取值 get value first
-                for (int j = i; j < last + 1; ++j) //length == last +1 ; for (int j = i - 1; j <= last; ++j)
+                for (int j = i - 1; j <= last; ++j) //length == last +1 ; 
                 {
-                    data[j - 1] = data[j]; //data[j] = data[j + 1];//move left               
+                    data[j] = data[j + 1]; //move left               
                 }
             }
             #endregion
@@ -364,7 +364,7 @@ namespace ListProject
                     #endregion
                     #region 没有相同的数据元素，将a表中的数据元素附加到b表的末尾。
                     if (j > Lb.GetLength() - 1) //mean next
-                    {
+                    {//没有相同的数据元素，将a表中的数据元素附加到b表的末尾。
                         Lb.Append(La[i]);
                     }
                     #endregion

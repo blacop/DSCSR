@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListProject
+namespace ListProject.LinkList
 {
-    public class LinkList<T> : IListDS<T> //单链表类 LinkList<T>的实现说明如下所示。
+    public class LinkList<T> : IListDS<T>
     {
         private Node<T> head; //单链表的头引用 字段 
         public Node<T> Head //头引用属性，对头引用字段操作，get方法得到head的引用
@@ -252,6 +252,65 @@ namespace ListProject
             }
             return i;
         }
+        LinkList<int> CreateLListHead_DeadCirle_HandData_HandEnd()
+        {
+            int d;
+            LinkList<int> L = new LinkList<int>();//L是新生成的链表引用
+            d = Int32.Parse(Console.ReadLine());
+            while (d != -1)
+            {   //-1是输入数据的结束标志
+                Node<int> p = new Node<int>(d);//p是新插入的结点
+                p.Next = L.Head;//L.Head是Node1
+                L.Head = p;//Clan mean: L.head = >L.next
+                d = Int32.Parse(Console.ReadLine());
+            }
+            return L;
+        }
+        LinkList<int> CreateLListHead_HandData_HandCount()
+        {   //在头部插入结点建立单链表的算法
+            int count;
+            int val;
+            LinkList<int> L = new LinkList<int>();
+            Console.WriteLine("input count:");
+            count = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("input val:");
+            val = Int32.Parse(Console.ReadLine());
+
+            while (count != 0)
+            {
+                Node<int> p = new Node<int>(d);
+                p.Next = L.Head;//头插法 core
+                L.Head = p;//头插法 core                
+                count--;
+            }
+            return L;
+        }
+        LinkList<int> CreateListTail()
+        {
+            Node<int> R = new Node<int>();//Temp Ptr R是L.Head是L->next
+            int d;
+            LinkList<int> L = new LinkList<int>();//L是新生成的链表引用
+            R = L.Head;
+            d = Int32.Parse(Console.ReadLine());
+            while (d != -1)
+            {
+                Node<int> p = new Node<int>(d);
+                if (L.Head == null)
+                {   //空表
+                    L.Head = p;
+                }
+                else
+                {   //head->next = p
+                    R.Next = p;
+                }
+                R = p;
+                d = Int32.Parse(Console.ReadLine());
+            }
+            if (R != null)
+            {   //set the tail
+                R.Next = null;
+            }
+            return L;
+        }
     }
 }
-
