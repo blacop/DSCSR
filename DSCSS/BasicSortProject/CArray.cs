@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArrayListProject
+namespace BasicSortProject
 {
     class CArray
     {
@@ -51,6 +51,7 @@ namespace ArrayListProject
             }
             nums.DisplayElements();
         }
+
         public void BubbleSort()
         {
             int temp;
