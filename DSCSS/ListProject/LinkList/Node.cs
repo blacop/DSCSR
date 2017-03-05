@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListProject
+namespace ListProject.LinkList
 {
     public class Node<T> //单链表结点类的实现
     {

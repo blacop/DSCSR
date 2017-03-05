@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListProject.LinkListNH
+namespace ListProject.LinkList
 {    //Type ADT //LinkListNoHeadNode
     public class LinkListNH<T> : IListDS<T> //单链表类 LinkListNH<T>的实现说明如下所示。
     {
@@ -311,6 +311,42 @@ namespace ListProject.LinkListNH
                 R.Next = null;
             }
             return L;
+        }
+
+        public LinkList<int> Merge(LinkList<int> Ha, LinkList<int> Hb)
+        {
+            //将两表合并成一表的算法实现如下：
+            LinkList<int> Hc = new LinkList<int>();
+            Node<int> p = Ha.Next;
+            Node<int> q = Hb.Next;
+            Node<int> s = new Node<int>();
+            Hc = Ha;
+            Hc.Next = null;
+            while (p != null && q != null)
+            {
+                if (p.Data < q.Data)
+                {
+                    s = p;
+                    p = p.Next;
+                }
+                else
+                {
+                    s = q;
+                    q = q.Next;
+                }
+                Hc.Append(s);
+            }
+            if (p == null)
+            {
+                p = q;
+            }
+            while (p != null)
+            {
+                s = p;
+                p = p.Next;
+                Hc.Append(s);
+            }
+            return Hc;
         }
     }
 }

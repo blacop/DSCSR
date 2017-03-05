@@ -3,12 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ListProject.LinkList;
 
 namespace ListProject.LinkList
 {
     public class LinkList<T> : IListDS<T>
     {
-        private Node<T> head; //单链表的头引用 字段 
+        private Node<T> next; //patch //head->next
+        private Node<T> head; //单链表的头引用 字段
+        public Node<T> Next //Next属性，对头引用字段操作，get方法得到head的引用
+        { //将头引用属性 作为了head的引用
+            //LinkList.head.get方法得到head的引用,这是C#的可以在head存数据的原因
+            get
+            {
+                return next;
+            }
+            set
+            {
+                next = value;
+            }
+        }
         public Node<T> Head //头引用属性，对头引用字段操作，get方法得到head的引用
         { //将头引用属性 作为了head的引用
             //LinkList.head.get方法得到head的引用,这是C#的可以在head存数据的原因
@@ -25,7 +39,9 @@ namespace ListProject.LinkList
         {
             //C语言的Head不存储数据，只存储Node1的引用
             //Head其实也可以存放数据，C#的这本书里是这样
-            head = null;
+            //this() => head;
+            next = head.Next;//patch
+            head.Next = null;//patch
             //linklist()<==> head; LinkList().head<==>.next
             //将head 作为字段//CLang:head.next = null;
             //clan mean:Pnode LinkList() head = LinkList();
@@ -60,9 +76,29 @@ namespace ListProject.LinkList
                 return false;
             }
         }
-        public void Append(T item) //在单链表的末尾添加新元素
+        public void Append(T item) //在单链表的末尾添加新元素，重载数据
         {
             Node<T> q = new Node<T>(item);//insert node
+            Node<T> p = new Node<T>();//temp ptr
+            #region  if (head.Next == null) 
+            if (head.Next == null)
+            {
+                head.Next = q;//C#里的head是一个空Node,next引用指向后继结点
+                return;
+            }
+            #endregion
+            #region p find to to end
+            p = head;
+            while (p.Next != null) //p find to end
+            {
+                p = p.Next;//ptr++
+            }
+            #endregion
+            p.Next = q;
+        }
+        public void Append(Node<T> ptr) //在单链表的末尾添加新结点，重载引用
+        {
+            Node<T> q = new Node<T>(ptr);//insert node
             Node<T> p = new Node<T>();//temp ptr
             #region  if (head.Next == null) 
             if (head.Next == null)
@@ -312,5 +348,164 @@ namespace ListProject.LinkList
             }
             return L;
         }
+        public void ReversLinkList(LinkList<int> ListH)
+        {
+            //存储整数的单链表的倒置的算法实现如下：
+            Node<int> H = ListH.Head;
+            Node<int> p = H.Next;
+            Node<int> q = new Node<int>();
+            H.Next = null;
+            while (p != null)
+            {
+                q = p;
+                p = p.Next;
+                q.Next = H.Next;
+                H.Next = q;
+            }
+        }
+        public void Reverse(LinkList<int> ListH)
+        {
+            Node<int> head = ListH.Head;
+            Node<int> p = head.Next;
+            Node<int> q = new Node<int>();
+            head.Next = null;
+            while (p != null)
+            {
+                q = p;
+                p = p.Next;
+                q.Next = head.Next;
+                head.Next = q;
+            }
+        }
+        /*
+【例2-5】有数据类型为整型的单链表Ha和Hb，
+其数据元素均按从小到大的升序排列，
+编写一个算法将它们合并成一个表Hc，要求Hc中结点的值也是升序排列。
+
+算法思路：把Ha的头结点作为Hc的头结点，
+依次扫描Ha和Hb的结点，
+比较Ha和Hb当前结点数据域的值，将较小值的结点附加到Hc的末尾，
+如此直到一个单链表被扫描完，
+然后将未完的那个单链表中余下的结点附加到Hc的末尾即可。
+*/
+        public LinkList<int> Merge(LinkList<int> Ha, LinkList<int> Hb)
+        {
+            //将两表合并成一表的算法实现如下：
+            LinkList<int> Hc = new LinkList<int>();
+            Node<int> Pa = Ha.Head.Next;
+            Node<int> Pb = Hb.Head.Next;
+            Node<int> Pc = new Node<int>();//已修正
+            Hc = Ha; //init Hc
+            Hc.Next = null;
+            #region case : while (Pa != null && Pb != null)
+            while (Pa != null && Pb != null)
+            {
+                if (Pa.Data <= Pb.Data)
+                {
+                    Pc = Pa;
+                    Pa = Pa.Next;
+                }
+                else //(Pb.Data < Pa.Data)
+                {
+                    Pc = Pb;
+                    Pb = Pb.Next;
+                }
+                Hc.Append(Pc);
+            }
+            #endregion
+            #region case : if (Pa == null)
+            if (Pa == null)
+            {
+                Pa = Pb;
+            }
+            #endregion
+            #region case : while (Pa != null)
+            while (Pa != null)
+            {
+                Pc = Pa;
+                Pa = Pa.Next;
+                Hc.Append(Pc);
+            }
+            #endregion
+            return Hc;
+        }
+        public LinkList<int> MergeHead(LinkList<int> Ha, LinkList<int> Hb)
+        {//把结点插入到链表Hc头部合并Ha和Hb的算法实现如下：
+            LinkList<int> Hc = new LinkList<int>();
+            Node<int> p = Ha.Next;
+            Node<int> q = Hb.Next;
+            Node<int> s = new Node<int>();
+            Hc = Ha;
+            Hc.Next = null;
+            #region //两个表非空
+            while (p != null && q != null)
+            {
+                if (p.Data < q.Data)
+                {
+                    s = p;
+                    p = p.Next;
+                }
+                else
+                {
+                    s = q;
+                    q = q.Next;
+                }
+                s.Next = Hc.Next;
+                Hc.Next = s;
+            }
+            #endregion
+            #region //第2个表非空而第1个表为空
+            if (p == null)
+            {
+                p = q;
+            }
+            #endregion
+            #region //将两表中的剩余数据元素附加到新表的末尾
+            while (p != null)
+            {
+                s = p;
+                p = p.Next;
+                s.Next = Hc.Next;
+                Hc.Next = s;
+            }
+            #endregion
+            return Hc;
+        }
+        /*【例2-6】已知一个存储整数的单链表Ha，试构造单链表Hb，要求单链表Hb中只包含单链表Ha中所有值不相同的结点。
+算法思路：先申请一个结点作为Hb的头结点，然后把Ha的第1个结点插入到Hb的头部，然后从Ha的第2个结点起，每一个结点的数据域的值与Hb中的每一个结点的数据域的值进行比较，如果不相同，则把该结点插入到Hb的头部。
+删除单链表中相同值的结点的算法实现如下：*/
+        public LinkList<int> Purge(LinkList<int> Ha)
+        {   //删除单链表中相同值的结点的算法实现如下：
+            //算法的时间复杂度是O(m+n)，m是Ha的表长，n是Hb的表长。
+            LinkList<int> Hb = new LinkList<int>();
+            Node<int> p = Ha.Next;
+            Node<int> q = new Node<int>();
+            Node<int> s = new Node<int>();
+            s = p;
+            p = p.Next;
+            s.Next = null;
+            Hb.Next = s;
+            #region case : while (p != null)
+            while (p != null)
+            {
+                s = p;
+                p = p.Next;
+                q = Hb.Next;
+                #region case : while (q != null && q.Data != s.Data)
+                while (q != null && q.Data != s.Data)
+                {
+                    q = q.Next;
+                }
+                #endregion
+                if (q == null)
+                {
+                    s.Next = Hb.Next;
+                    Hb.Next = s;
+                }
+            }
+            #endregion
+            return Hb;
+        }
+        
     }
 }
