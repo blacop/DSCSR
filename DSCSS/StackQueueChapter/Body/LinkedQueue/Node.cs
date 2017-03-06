@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackQueueChapter.LinkedStack
+namespace StackQueueChapter.Body.LinkedQueue
 {
-    /*数据结构（C#语言版）
-3.1 栈 77*/
-    //链栈结点类(Node<T>)的实现如下：
     public class Node<T>
     {
         private T data; //数据域
-        private Node<T> next; //引用域
-
+        private Node<T> next; //引用域                              
         public Node(T val, Node<T> p)//构造器
         {
             data = val;
@@ -55,5 +51,5 @@ namespace StackQueueChapter.LinkedStack
                 next = value;
             }
         }
-    }//public class Node<T>
-}//namespace StackQueueChapter.LinkedStack
+    }// public class Node<T>
+}//namespace StackQueueChapter.Body.LinkedQueue

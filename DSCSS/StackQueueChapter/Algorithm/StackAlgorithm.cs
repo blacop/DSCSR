@@ -1,5 +1,5 @@
-﻿using StackQueueChapter.LinkedStack;
-using StackQueueChapter.SequenceStack;
+﻿using StackQueueChapter.Body.LinkedStack;
+using StackQueueChapter.Body.SequenceStack;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace StackQueueChapter.Algorithm
 {
-    public class Algorithm
+    public class StackAlgorithm
     {
         /* 【例3-1】数制转换问题 */
         public void ConversionOct(int n)//8进制转换
@@ -129,13 +129,13 @@ namespace StackQueueChapter.Algorithm
         }//public int EvaluateExpression()
 
         private int Operate(int a, char theta, int b)
-        {            
+        {
             /*Operate为进行二元运算的方法*/
             throw new NotImplementedException();
         }
 
         private char Precede(char v, char c)
-        {            
+        {
             /*Precede是判定optr栈顶算符与读入的算符之间的优先级关系的方法*/
             throw new NotImplementedException();
         }

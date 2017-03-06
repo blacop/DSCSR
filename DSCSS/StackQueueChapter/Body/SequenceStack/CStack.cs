@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackQueueChapter.SequenceStack
+namespace StackQueueChapter.Body.SequenceStack
 {
     class CStack
     {        

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using StackQueueChapter.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackQueueChapter.SequenceStack
+namespace StackQueueChapter.Body.SequenceStack
 {
     //顺序栈类SeqStack<T> 的实现说明如下所示。
     public class SeqStack<T> : IStack<T>

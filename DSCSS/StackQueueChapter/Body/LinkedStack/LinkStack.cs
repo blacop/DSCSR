@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackQueueChapter.LinkedStack
+namespace StackQueueChapter.Body.LinkedStack
 {
     /*数据结构（C#语言版）
 3.1 栈 79*/
