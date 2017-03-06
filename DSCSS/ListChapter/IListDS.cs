@@ -6,22 +6,7 @@ using System.Threading.Tasks;
 
 namespace ListProject
 {
-    public interface IListDS<T>
-    {
-        //InterfaceListDataStruct
-        //线性表基本操作,自定义一个泛型接口
-        //item的类型用T泛型描述,实现数据类型和算法分离
-        //这可以实现算法对不同数据结构的重用
-        int GetLength(); //求长度 1
-        void Clear(); //清空操作  2
-        bool IsEmpty();//判断线性表是否为空 3
-        void Append(T item); //附加操作 4
-        void Insert(T item, int i); //插入操作 5
-        T Delete(int i); //删除操作 6
-        T GetElem(int i); //取表元 7
-        int Locate(T value);/*按值查找 8 */
-        /* void Reverse();//倒置,可选*/
-        /*ADT
+    /*ADT
        为了和.NET 框架中的接口 IList 相区分，在 IList 后面加了“DS”，“DS”
        表示数据结构。下面对线性表的基本操作进行说明。
        1、 求长度：GetLength()
@@ -61,5 +46,20 @@ namespace ListProject
        属性也是方法。在后面章节的数据结构如栈、队列等的处理也是如此，就不一一
        说明了。
        */
+    public interface IListDS<T>
+    {
+        //InterfaceListDataStruct
+        //线性表基本操作,自定义一个泛型接口
+        //item的类型用T泛型描述,实现数据类型和算法分离
+        //这可以实现算法对不同数据结构的重用
+        int GetLength(); //求长度 1
+        void Clear(); //清空操作  2
+        bool IsEmpty();//判断线性表是否为空 3
+        void Append(T item); //附加操作 4
+        void Insert(T item, int i); //插入操作 5
+        T Delete(int i); //删除操作 6
+        T GetElem(int i); //取表元 7
+        int Locate(T value);/*按值查找 8 */
+        /* void Reverse();//倒置,可选*/        
     }
 }
