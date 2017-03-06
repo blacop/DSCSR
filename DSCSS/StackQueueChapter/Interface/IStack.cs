@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackQueueChapter
+namespace StackQueueChapter.Interface
 {
     /*ADT下面对栈的基本操作进行说明。
     1、求栈的长度：GetLength()

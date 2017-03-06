@@ -14,7 +14,6 @@ namespace StackQueueChapter.SequenceStack
         private T[] data; //数组，用于存储顺序栈中的数据元素 data
         private int maxsize; //顺序栈的容量
         private int top; //指示顺序栈的栈顶 ref
-
         public T this[int index]//索引器
         {
             get
@@ -25,9 +24,8 @@ namespace StackQueueChapter.SequenceStack
             {
                 data[index] = value;
             }
-        }//public T this[int index]
-        //容量属性
-        public int Maxsize
+        }//public T this[int index]       
+        public int Maxsize //容量属性
         {
             get
             {
@@ -38,33 +36,28 @@ namespace StackQueueChapter.SequenceStack
                 maxsize = value;
             }
         }
-        //栈顶属性
-        public int Top
+        public int Top//栈顶属性
         {
             get
             {
                 return top;
             }
         }
-        //构造器
-        public SeqStack(int size)
+        public SeqStack(int size)//构造器
         {
             data = new T[size];
             maxsize = size;
             top = -1;
         }
-        //求栈的长度
-        public int GetLength()
+        public int GetLength()//求栈的长度
         {
             return top + 1;
         }
-        //清空顺序栈
-        public void Clear()
+        public void Clear()//清空顺序栈
         {
             top = -1;
         }
-        //判断顺序栈是否为空
-        public bool IsEmpty()
+        public bool IsEmpty()//判断顺序栈是否为空
         {
             if (top == -1)
             {
@@ -75,8 +68,7 @@ namespace StackQueueChapter.SequenceStack
                 return false;
             }
         }
-        //判断顺序栈是否为满
-        public bool IsFull()
+        public bool IsFull()//判断顺序栈是否为满
         {
             if (top == maxsize - 1)
             {
@@ -87,8 +79,7 @@ namespace StackQueueChapter.SequenceStack
                 return false;
             }
         }
-        //入栈
-        public void Push(T item)
+        public void Push(T item)//入栈
         {
             if (IsFull())
             {
@@ -97,8 +88,7 @@ namespace StackQueueChapter.SequenceStack
             }
             data[++top] = item;
         }
-        //出栈
-        public T Pop()
+        public T Pop()//出栈
         {
             T tmp = default(T);
             if (IsEmpty())
@@ -110,8 +100,7 @@ namespace StackQueueChapter.SequenceStack
             --top;
             return tmp;
         }
-        //获取栈顶数据元素
-        public T GetTop()
+        public T GetTop()//获取栈顶数据元素
         {
             if (IsEmpty())
             {

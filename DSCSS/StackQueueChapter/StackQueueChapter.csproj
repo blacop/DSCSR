@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm\Algorithm.cs" />
+    <Compile Include="LinkedStack\LinkStack.cs" />
     <Compile Include="SequenceStack\CStack.cs" />
     <Compile Include="IStack.cs" />
     <Compile Include="LinkedStack\Node.cs" />
