@@ -278,7 +278,7 @@ namespace ListProject.LinkList
 
             while (count != 0)
             {
-                Node<int> p = new Node<int>(d);
+                Node<int> p = new Node<int>(val);
                 p.Next = L.Head;//头插法 core
                 L.Head = p;//头插法 core                
                 count--;

@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-namespace ArrayListProject
+namespace ListProject.ArrayListChapter
 {
-
     public class SamplesArrayList
     {
         /*
-数据结构（C#语言版）
-2.5 C#中的线性表 66
-*/
+        数据结构（C#语言版）
+        2.5 C#中的线性表 66
+        */
+        /*
         public static void Main()
         {
             // 创建和初始化一个新的ArrayList.
@@ -28,6 +28,7 @@ namespace ArrayListProject
             Console.Write("Values:");
             PrintValues(myAL);
         }
+        */
         //方法，输出ArrayList中的每个元素
         public static void PrintValues(IEnumerable myList)
         {
@@ -36,7 +37,6 @@ namespace ArrayListProject
                 Console.Write("{0}", obj);
                 Console.WriteLine();
             }
-        }
-    }
-
-}
+        }//public static void PrintValues(IEnumerable myList)
+    }//public class SamplesArrayList
+}//namespace ListProject.ArrayListChapter

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ListProject
 {
     public class SeqList<T> : IListDS<T>
-    {   
+    {
         //顺序表类 SeqList<T>的实现说明如下所示。相当于c里面的typedef定义封装结构体
         //C# 里面 用class定义封装结构体,字段=>存储，属性=>逻辑，也是一种解耦思想
         private T[] data; //数组，用于存储顺序表中的数据元素

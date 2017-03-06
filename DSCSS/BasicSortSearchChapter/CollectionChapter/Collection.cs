@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CollectionProject
+namespace ListProject.CollectionChapter
 {
     /*
     //ADT Collection,这是一个ADT抽象数据类型Collection
@@ -48,11 +48,11 @@ namespace CollectionProject
     }
 */
     /*
-            //请对 Collection 类添加下列方法：
-            a.Insert
-            b.Contains
-            c.IndexOf
-            d. RemoveAt
-            */
+    //请对 Collection 类添加下列方法：
+    a.Insert
+    b.Contains
+    c.IndexOf
+    d. RemoveAt
+    */
 
 }

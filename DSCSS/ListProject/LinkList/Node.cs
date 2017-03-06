@@ -18,17 +18,17 @@ namespace ListProject.LinkList
         public Node(Node<T> p)//构造器,参数 引用域
         {
             next = p;
-        }        
+        }
         public Node(T val) //构造器，参数 数据域
         {
             data = val;
             next = null;
-        }        
+        }
         public Node() //构造器，参数 无参
         {
-            data = default(T); 
+            data = default(T);
             next = null;
-        }       
+        }
         public T Data //数据域属性
         {
             get
@@ -39,7 +39,7 @@ namespace ListProject.LinkList
             {
                 data = value;
             }
-        }        
+        }
         public Node<T> Next //引用域属性
         {
             get
