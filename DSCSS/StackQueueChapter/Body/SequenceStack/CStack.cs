@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackQueueChapter.Body.SequenceStack
-{
+namespace StackQueueChapter.Body.SequenceStack {
+    //CStack == CStack
+    //p_index == p_index
     /*属性 禁用
-    public int P_index //属性 top ptr
+    public int P_index //属性 p_index ptr
     {
         get
         {
@@ -36,42 +37,34 @@ public object this[int index]//索引器
 */
     //数据结构与算法 C#语言描述(中文) 50/246
     //这个ArrayList不是泛型,里面是Object,性能比泛型类的Stack要差
-    public class ALStack
-    {
-        private int top;//ref domain
-        private ArrayList list; //data domain        
-        public ALStack()//构造器
-        {
+    public class CStack {
+        private int p_index;//ref domain
+        private ArrayList list; //data domain
+        public CStack() {//构造器
             list = new ArrayList();//不定长16
-            top = -1;
-        }
-        public int Count //Length
-        {
-            get
-            {
+            p_index = -1;
+        }//构造器
+        public int Count {
+            get {
                 return list.Count;
             }
-        }
-        public void push(object item)
-        {
+        }//Length属性,只读
+        public void push(object item) {
             list.Add(item);
-            top++;
-        }
-        public object pop()
-        {
-            object obj = list[top];
-            list.RemoveAt(top);
-            top--;
+            p_index++;
+        }//push()
+        public object pop() {
+            object obj = list[p_index];
+            list.RemoveAt(p_index);
+            p_index--;
             return obj;
-        }
-        public void clear()
-        {
+        }//pop()
+        public void clear() {
             list.Clear();
-            top = -1;
-        }
-        public object peek()
-        {
-            return list[top];
-        }
-    }//public class CStack
+            p_index = -1;
+        }//clear()
+        public object peek() {
+            return list[p_index];
+        }//getp_index()
+    }
 }//namespace StackQueueChapter.Body.SequenceStack

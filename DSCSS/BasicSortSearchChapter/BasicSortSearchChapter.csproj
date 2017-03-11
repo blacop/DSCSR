@@ -43,10 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithm\CArrayInt.cs" />
     <Compile Include="ArrayListChapter\SamplesArrayList.cs" />
     <Compile Include="TestMain\BasicSortTestMain.cs" />
     <Compile Include="TestMain\binSearchTestMain.cs" />
-    <Compile Include="CArray.cs" />
+    <Compile Include="Algorithm\CArray.cs" />
     <Compile Include="CollectionChapter\chapter\chapter2.cs" />
     <Compile Include="CollectionChapter\chapter\chapter3.cs" />
     <Compile Include="CollectionChapter\Collection.cs" />

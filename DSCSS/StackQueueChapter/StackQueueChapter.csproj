@@ -48,9 +48,10 @@
     <Compile Include="Body\LinkedQueue\LinkQueue.cs" />
     <Compile Include="Body\LinkedQueue\Node.cs" />
     <Compile Include="Body\SequenceQueue\CSeqQueue.cs" />
+    <Compile Include="Body\SequenceStack\ArrayListStack.cs" />
     <Compile Include="Interface\IQueue.cs" />
     <Compile Include="Body\LinkedStack\LinkStack.cs" />
-    <Compile Include="Body\SequenceStack\ALStack.cs" />
+    <Compile Include="Body\SequenceStack\CStack.cs" />
     <Compile Include="Interface\IStack.cs" />
     <Compile Include="Body\LinkedStack\Node.cs" />
     <Compile Include="Program.cs" />
