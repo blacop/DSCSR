@@ -138,12 +138,12 @@ namespace StackQueueChapter.Algorithm {
             return result;//返回结果数
         }/*Operate为进行二元运算的方法*///private int Operate(int a, char theta, int b)
         private char Precede(char optr1, char optr2) {//优先级关系的方法
-            /*Precede是判定optr栈顶算符与读入的算符之间的优先级关系的方法*/
-            char result;
+            /*Precede是判定optr栈顶算符与读入的算符之间的优先级关系的方法*/           
             throw new NotImplementedException();
-            if (optr1 == '-' && optr2 == '=') { }//这个优先级关系很麻烦,跳过
-            else { }//这个优先级关系很麻烦,跳过
-            return result;//返回结果数
+            //char result;
+            //if (optr1 == '-' && optr2 == '=') { }//这个优先级关系很麻烦,跳过
+            //else { }//这个优先级关系很麻烦,跳过
+            //return result;//返回结果数
         }//优先级关系的方法//private char Precede(char v, char c)       
         static void EvaluateExpression_Main(string[] args) { /*EvaluateExpression_Another----------------*/
             //系统自带Stack
