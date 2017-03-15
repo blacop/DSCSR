@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicSortSearchChapter.Algorithm {
+namespace SortSearchBasic.Algo {
     public class CArrayInt {
         //测试类
         private int[] arr; //数据域
@@ -343,4 +343,4 @@ namespace BasicSortSearchChapter.Algorithm {
         }////递归二叉查找算法
         //---------------分隔线---------------------
     }//public class CArrayInt
-}//namespace BasicSortSearchChapter.Algorithm {
+}//namespace SortSearchBasic.Algo {
