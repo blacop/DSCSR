@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using System.Threading;
 
-namespace ListProject.CollectionChapter
-{
-    //时间测试类
+namespace ListProject.CollectionChapter {
     /*时间差方法
     public class Timing
     {
+    //时间测试类 时间差方法
         TimeSpan startingTime;
         TimeSpan duration;
         public Timing()//Timing 构造器
@@ -39,8 +38,8 @@ namespace ListProject.CollectionChapter
         }
     }
     */
-    public class Timing//TotalProcessorTime方法
-    {//时间测试类
+    public class Timing { //时间测试类 计算总时间方法
+        //TotalProcessorTime计算总时间方法//时间测试类
         TimeSpan duration;
         public Timing()//Timing 构造器
         {
@@ -50,14 +49,13 @@ namespace ListProject.CollectionChapter
         {
             duration = Process.GetCurrentProcess().TotalProcessorTime;
         }
-        public void startTime() //GC run
+        public void startTime() //GC run 运行垃圾回收
         {
             GC.Collect();
             GC.WaitForPendingFinalizers();
         }
-        public TimeSpan Result()
-        {
-            return duration;
-        }
-    }
-}
+        public TimeSpan Result() { //返回TimeSpan
+            return duration; //TimeSpan,属性TotalSeconds            
+        }//public TimeSpan Result()
+    }//时间测试类 计算总时间方法
+}//namespace ListProject.CollectionChapter {

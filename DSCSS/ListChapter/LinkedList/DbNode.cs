@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListProject.LinkList
-{
+namespace ListProject.LinkList {
+    //双向链表
     /*
     数据结构（C#语言版）
 2.4 其他链表 62*/
-    public class DbNode<T>
-    {
+    public class DbNode<T> {
         private T data; //数据域
         private DbNode<T> prev; //前驱引用域
         private DbNode<T> next; //后继引用域
@@ -21,55 +20,43 @@ namespace ListProject.LinkList
             next = p;
         }
         //构造器
-        public DbNode(DbNode<T> p)
-        {
+        public DbNode(DbNode<T> p) {
             next = p;
         }
         //构造器
-        public DbNode(T val)
-        {
+        public DbNode(T val) {
             data = val;
             next = null;
         }
         //构造器
-        public DbNode()
-        {
+        public DbNode() {
             data = default(T);
             next = null;
         }
         //数据域属性
-        public T Data
-        {
-            get
-            {
+        public T Data {
+            get {
                 return data;
             }
-            set
-            {
+            set {
                 data = value;
             }
         }
         //前驱引用域属性
-        public DbNode<T> Prev
-        {
-            get
-            {
+        public DbNode<T> Prev {
+            get {
                 return prev;
             }
-            set
-            {
+            set {
                 prev = value;
             }
         }
         //后继引用域属性
-        public DbNode<T> Next
-        {
-            get
-            {
+        public DbNode<T> Next {
+            get {
                 return next;
             }
-            set
-            {
+            set {
                 next = value;
             }
         }

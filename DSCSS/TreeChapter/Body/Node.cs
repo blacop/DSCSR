@@ -19,7 +19,7 @@ namespace TreeChapter.Body {
             data = default(T);
             lChild = lp;
             rChild = rp;
-        }//构造器        
+        }//构造器
         public Node(T val) {//构造器
             data = val;
             lChild = null;
@@ -29,7 +29,7 @@ namespace TreeChapter.Body {
             data = default(T);
             lChild = null;
             rChild = null;
-        }//构造器        
+        }//构造器
         public T Data {//数据属性
             get {
                 return data;
