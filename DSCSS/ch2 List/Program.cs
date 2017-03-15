@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListChapter
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace ch2_List {
+    class Program {
+        static void Main(string[] args) {
         }
     }
 }

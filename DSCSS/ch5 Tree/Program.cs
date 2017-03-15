@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicSortSearchChapter
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace ch5_Tree {
+    class Program {
+        static void Main(string[] args) {
         }
     }
 }

@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StringChapter
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+namespace ch6_BitArray {
+    class Program {
+        static void Main(string[] args) {
         }
     }
 }

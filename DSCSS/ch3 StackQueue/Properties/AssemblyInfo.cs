@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("StackQueueChapter")]
+[assembly: AssemblyTitle("ch3 StackQueue")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StackQueueChapter")]
+[assembly: AssemblyProduct("ch3 StackQueue")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("3173d6b3-cc63-480d-9fcd-ac70df6970b6")]
+[assembly: Guid("69972bb1-0268-43e3-b2b6-ea49fb021172")]
 
 // 程序集的版本信息由下列四个值组成: 
 //
