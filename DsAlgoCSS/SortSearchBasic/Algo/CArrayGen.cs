@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SortSearchBasic.Algo {
-    public class CArray<T> {
+    public class CArrayGen<T> {
         //测试类 泛型
         private T[] arr; //数据域
         private int upper;//upper == last ptr, ==> Length-1;
@@ -50,7 +50,7 @@ namespace SortSearchBasic.Algo {
                 numElements = value;
             }
         }//属性
-        public CArray(int size) { //构造器
+        public CArrayGen(int size) { //构造器
             arr = new T[size];  //数据域 //size is Length
             Upper = size - 1; //upper is last ptr, ==> Length-1;
             Length = size;
@@ -107,7 +107,7 @@ namespace SortSearchBasic.Algo {
         //---------------分隔线---------------------
 
         //---------------分隔线---------------------
-    }//public class CArray<T>
+    }//public class CArrayGen<T>
 }//namespace SortSearchBasic.Algo
 
 
