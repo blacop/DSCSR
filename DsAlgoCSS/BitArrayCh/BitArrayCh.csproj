@@ -58,6 +58,13 @@
     <Compile Include="Algo\BitOperations.Designer.cs">
       <DependentUpon>BitOperations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Algo\EratosthenesCMD.cs" />
+    <Compile Include="Algo\SieveOfEratosthenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Algo\SieveOfEratosthenes.Designer.cs">
+      <DependentUpon>SieveOfEratosthenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -71,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Algo\BitOperations.resx">
       <DependentUpon>BitOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Algo\SieveOfEratosthenes.resx">
+      <DependentUpon>SieveOfEratosthenes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
