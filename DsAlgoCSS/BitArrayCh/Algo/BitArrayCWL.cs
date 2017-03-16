@@ -19,7 +19,35 @@ namespace BitArrayCh.Algo {
     //尽管已经把程序完整地写到了 Main()内，但是在本章末尾的练习部分大家还有机会通过创建类，甚至是扩展含
     //有此转换方法的 BitArray 类来整理此程序。
 
-    class BitArrayCWL {
+    public class BitArrayCWL {
+        /// <summary>
+        /// BitArray升序输出(PrintASC),In byte[] ByteSet，Out CMD.
+        /// </summary>
+        /// <param name="ByteSet">In byte[] ByteSet</param>
+        public static void BitArrayPrint(byte[] ByteSet) { //外部得到数据
+            int bits;
+            string[] binNumber = new string[8];//To Dsc String 输出到目标字符串
+            int binary;
+            
+            BitArray BitSet = new BitArray(ByteSet); //外部得到数据 byte[] ByteSet，构造BitArray
+            bits = 0;  //count
+            binary = 7;  //index
+            for (int i = 0; i <= BitSet.Count - 1; i++) {
+                if (BitSet.Get(i) == true)
+                    binNumber[binary] = "1"; //To Dsc String 输出到目标字符串
+                else
+                    binNumber[binary] = "0"; //To Dsc String 输出到目标字符串
+                bits++;
+                binary--;
+                if ((bits % 8) == 0) { //BYTE_MAX == 255, So byte 只有 8位
+                    binary = 7; //BYTE_MAX == 255, So byte 只有 8位
+                    bits = 0;
+                    for (int ji = 0; ji <= 7; ji++) // Console.Write
+                        Console.Write(binNumber[ji]);
+                    Console.WriteLine();
+                }//if ((bits % 8) == 0)
+            }//for (int i = 0; i <= BitSet.Count - 1; i++)
+        }//static void Main()
 
         //在可以调用 OLE 之前，必须将当前线程设置为单线程单元(STA)模式，请确保您的Main函数带有STAThreadAttribute标记。
         [STAThread]

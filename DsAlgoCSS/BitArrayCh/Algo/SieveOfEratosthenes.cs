@@ -13,7 +13,13 @@ namespace BitArrayCh.Algo {
     public partial class SieveOfEratosthenes : Form {
         public SieveOfEratosthenes() { //构造器
             InitializeComponent();
-        } //构造器        
+        } //构造器 
+
+        /// <summary>
+        /// 二进制转化器,In Decimal,Out Binary
+        /// </summary>
+        /// <param name="val">In Decimal</param>
+        /// <returns>Out Binary</returns>
         private StringBuilder ConvertBits(int val) { //二进制转化器，进int,出string
             int bitMask = 1 << 31;
             StringBuilder bitBuffer = new StringBuilder(35);
@@ -84,7 +90,11 @@ namespace BitArrayCh.Algo {
             #endregion
         }//取得用户输入的数据并且转化成二进制数() 分析已经生成的质数表
 
-        private void BuildSieve(BitArray bits) { //取得用户输入的数据并且转化成二进制数() 制定素数表格 输出素数表格
+        /// <summary>
+        /// 取得用户输入的数据并且转化成二进制数 制定素数表格 输出素数表格
+        /// </summary>
+        /// <param name="bits">取得用户输入的数据并且转化成二进制数</param>
+        private void BuildSieve(BitArray bits) { //取得用户输入的数据并且转化成二进制数 制定素数表格 输出素数表格
             #region 取得用户输入的数据并且转化成二进制数()
             //bits应该是用户输入的数据 转化成的 二进制数
             int userData = Int32.Parse(txtValue.Text);//从输入框取到数据 imp

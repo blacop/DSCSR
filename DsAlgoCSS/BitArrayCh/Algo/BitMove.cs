@@ -13,7 +13,13 @@ namespace BitArrayCh.Algo {
         public BitMove() { //构造器
             InitializeComponent();
         }
-        // Windows generated code omitted
+
+
+        /// <summary>
+        /// 二进制转化器,In Decimal,Out Binary
+        /// </summary>
+        /// <param name="val">In Decimal</param>
+        /// <returns>Out Binary</returns>
         private StringBuilder ConvertBits(int val) { //二进制转化器
             int bitMask = 1 << 31;
             StringBuilder bitBuffer = new StringBuilder(35);

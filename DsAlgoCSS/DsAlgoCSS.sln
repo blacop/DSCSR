@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackQueue", "StackQueue\St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitArrayCh", "BitArrayCh\BitArrayCh.csproj", "{840247C4-ABFD-4C8C-A68A-A0B274E486C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCh", "StringCh\StringCh.csproj", "{C5431154-FF03-425C-840B-8E9B0A946775}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{840247C4-ABFD-4C8C-A68A-A0B274E486C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{840247C4-ABFD-4C8C-A68A-A0B274E486C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{840247C4-ABFD-4C8C-A68A-A0B274E486C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5431154-FF03-425C-840B-8E9B0A946775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5431154-FF03-425C-840B-8E9B0A946775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5431154-FF03-425C-840B-8E9B0A946775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5431154-FF03-425C-840B-8E9B0A946775}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
