@@ -66,7 +66,9 @@ namespace StringCh.Algo {
             }
             return words;//返回 名为 word 的集合
         }//单词提取 //static ArrayList SplitWords(string astring)
+
         //当然，如果打算在程序中实际使用这个算法，那么最好把它做成一个函数并且返回一个集合，如下所示：
+
         static void Main() {
             string astring = "now is the time for all good people ";
             ArrayList words = new ArrayList();

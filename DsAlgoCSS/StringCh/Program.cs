@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace StringCh {
-    class Program {
-        static void Main(string[] args) {
-        }
-    }
-}
+    //class Program {
+    //    static void Main(string[] args) {
+    //    }
+    //}
+}//namespace StringCh
