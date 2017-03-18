@@ -41,6 +41,8 @@ namespace StringCh.Algo {
         //    }//单词提取//static void Main()
         //}//static void Main1()
 
+        //当然，如果打算在程序中实际使用这个算法，那么最好把它做成一个函数并且返回一个集合，如下所示：
+
         /// <summary>
         /// //单词提取,In 需要分割的字符串，返回 名为 word 的集合
         /// </summary>
@@ -66,17 +68,16 @@ namespace StringCh.Algo {
             }
             return words;//返回 名为 word 的集合
         }//单词提取 //static ArrayList SplitWords(string astring)
+             
 
-        //当然，如果打算在程序中实际使用这个算法，那么最好把它做成一个函数并且返回一个集合，如下所示：
-
-        static void Main() {
-            string astring = "now is the time for all good people ";
-            ArrayList words = new ArrayList();
-            words = SplitWords(astring);
-            foreach (string word in words)
-                Console.Write(word + " ");
-            Console.Read();
-        }//static void Main()
+        //static void Main() {
+        //    string s1 = "Hello, . Welcome to my class.";
+        //    string name = "Clayton";
+        //    int pos = s1.IndexOf(",");
+        //    s1 = s1.Insert(pos + 2, name);
+        //    Console.WriteLine(s1);
+        //    Console.Read();
+        //}
 
     }//class WordDraw
 }//namespace StringCh.Algo

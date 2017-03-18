@@ -46,6 +46,7 @@
     <Compile Include="Algo\ArrayListMember.cs" />
     <Compile Include="Algo\Collection.cs" />
     <Compile Include="Algo\SamplesArrayList.cs" />
+    <Compile Include="Algo\Timing.cs" />
     <Compile Include="Chapter\chapter2.cs" />
     <Compile Include="Chapter\chapter3.cs" />
     <Compile Include="Program.cs" />
