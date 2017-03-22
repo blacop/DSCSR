@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algo\AlgoMathSeries.cs" />
     <Compile Include="Algo\CArray.cs" />
     <Compile Include="Algo\CArrayGen.cs" />
     <Compile Include="Algo\Timing.cs" />
