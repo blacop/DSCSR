@@ -22,9 +22,9 @@ namespace SortSearchBasic.Algo {
         //C# lanmda mySeries写法
         //级数求和 C#真lanmda写法
         //Constant 常数项, base 底数，limit 极限上界
-        double baseX;
-        int limit;
-        int Constant;
+        //double baseX;
+        //int limit;
+        //int Constant;
         delegate double del(double baseX, int limit, int Constant);
         del mySeries = (baseX, limit, Constant) => {
             double sum = 0.0;

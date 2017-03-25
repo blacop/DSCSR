@@ -245,24 +245,22 @@ namespace SortSearchBasic.Algo {
         } //插入排序//public void InsertionSort()
 
         //快速排序 cs
-        public void quicksort(List<int> v, int left, int right) {
+        public static int quicksort(ArrayList<int> v, int left, int right) {
             if (left < right) {
                 int key = v[left];
                 int low = left;
                 int high = right;
                 while (low < high) {
-                    while (low < high && v[high] > key) {
+                    while (low < high && v[high] > key)
                         high--;
-                    }
                     v[low] = v[high];
 
-                    while (low < high && v[low] < key) {
+                    while (low < high && v[low] < key)
                         low++;
-                    }
                     v[high] = v[low];
                 }
                 v[low] = key;
-                quicksort(v, left, low - 1);
+                quicksort(v, left, low - 1); // 递归调用
                 quicksort(v, low + 1, right);
             }
         }
@@ -290,7 +288,7 @@ namespace SortSearchBasic.Algo {
         //}
 
         //快速排序 cs-----------       
-        void quick_sort(int[] s, int l, int r) {
+        public static void quick_sort(int[] s, int l, int r) {
             if (l < r) {
                 //Swap(s[l], s[(l + r) / 2]); //将中间的这个数和第一个数交换 参见注1  
                 int i = l, j = r, x = s[l];

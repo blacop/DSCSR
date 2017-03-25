@@ -49,31 +49,32 @@ namespace BitArrayCh.Algo {
             }//for (int i = 0; i <= BitSet.Count - 1; i++)
         }//static void Main()
 
-        //在可以调用 OLE 之前，必须将当前线程设置为单线程单元(STA)模式，请确保您的Main函数带有STAThreadAttribute标记。
-        [STAThread]
-        static void Main() {
-            int bits;
-            string[] binNumber = new string[8];//To Dsc String 输出到目标字符串
-            int binary;
-            byte[] ByteSet = new byte[] { 1, 2, 3, 4, 5 };//get data 得到数据
-            BitArray BitSet = new BitArray(ByteSet); //构造BitArray
-            bits = 0;  //count
-            binary = 7;  //index
-            for (int i = 0; i <= BitSet.Count - 1; i++) {
-                if (BitSet.Get(i) == true)
-                    binNumber[binary] = "1"; //To Dsc String 输出到目标字符串
-                else
-                    binNumber[binary] = "0"; //To Dsc String 输出到目标字符串
-                bits++;
-                binary--;
-                if ((bits % 8) == 0) { //BYTE_MAX == 255, So byte 只有 8位
-                    binary = 7; //BYTE_MAX == 255, So byte 只有 8位
-                    bits = 0;
-                    for (int ji = 0; ji <= 7; ji++) // Console.Write
-                        Console.Write(binNumber[ji]);
-                    Console.WriteLine();
-                }//if ((bits % 8) == 0)
-            }//for (int i = 0; i <= BitSet.Count - 1; i++)
-        }//static void Main()
+        ////在可以调用 OLE 之前，必须将当前线程设置为单线程单元(STA)模式，请确保您的Main函数带有STAThreadAttribute标记。
+        //[STAThread]
+        //static void Main() {
+        //    int bits;
+        //    string[] binNumber = new string[8];//To Dsc String 输出到目标字符串
+        //    int binary;
+        //    byte[] ByteSet = new byte[] { 1, 2, 3, 4, 5 };//get data 得到数据
+        //    BitArray BitSet = new BitArray(ByteSet); //构造BitArray
+        //    bits = 0;  //count
+        //    binary = 7;  //index
+        //    for (int i = 0; i <= BitSet.Count - 1; i++) {
+        //        if (BitSet.Get(i) == true)
+        //            binNumber[binary] = "1"; //To Dsc String 输出到目标字符串
+        //        else
+        //            binNumber[binary] = "0"; //To Dsc String 输出到目标字符串
+        //        bits++;
+        //        binary--;
+        //        if ((bits % 8) == 0) { //BYTE_MAX == 255, So byte 只有 8位
+        //            binary = 7; //BYTE_MAX == 255, So byte 只有 8位
+        //            bits = 0;
+        //            for (int ji = 0; ji <= 7; ji++) // Console.Write
+        //                Console.Write(binNumber[ji]);
+        //            Console.WriteLine();
+        //        }//if ((bits % 8) == 0)
+        //    }//for (int i = 0; i <= BitSet.Count - 1; i++)
+        //}//static void Main()
+
     }// class BitArrayCWL
 }//namespace BitArrayCh.Algo
