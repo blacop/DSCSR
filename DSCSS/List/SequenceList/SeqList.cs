@@ -8,9 +8,13 @@ namespace ListProject {
     public class SeqList<T> : IListDS<T> {
         //顺序表类 SeqList<T>的实现说明如下所示。相当于c里面的typedef定义封装结构体
         //C# 里面 用class定义封装结构体,字段=>存储，属性=>逻辑，也是一种解耦思想
+
+        //3个字段field
         private T[] data; //数组，用于存储顺序表中的数据元素
         private int last; //cur工作指针,指示顺序表最后一个元素的位置
         private int maxsize; //顺序表的容量
+
+        //3个属性，索引器也是一种属性
         public T this[int index] {//索引器
             //索引器,this=>实例化对象，实例化对象属性=>读写逻辑,
             //索引器,this表示这个类的实例化对象，对this的存储和读取都通过索引器进行
@@ -21,11 +25,13 @@ namespace ListProject {
                 data[index] = value;
             }
         }//索引器
+
         public int Last { //最后一个数据元素位置属性,last指针，只读
             get {
                 return last;
             }
         }//最后一个数据元素位置属性,last指针，只读
+
         public int Maxsize {//容量属性
             get {
                 return maxsize;
@@ -34,6 +40,8 @@ namespace ListProject {
                 maxsize = value;
             }
         }//容量属性
+
+        //1个构造器
         public SeqList(int size) {
             //构造器，参数，数据域数组长度
             //没有无参构造器
@@ -43,6 +51,8 @@ namespace ListProject {
             maxsize = size; //数据域 数组长度
             last = -1;//cur 当前工作指针
         } //构造器
+
+        //13个方法
         public int GetLength() { //求顺序表的长度
             return last + 1;
         }//求顺序表的长度

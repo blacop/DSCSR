@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCh", "StringCh\String
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegExCh", "RegExCh\RegExCh.csproj", "{8C579A9F-F3E7-4A67-B2C0-D4E9441BDFB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictCh", "DictCh\DictCh.csproj", "{64CF98B7-F978-4E76-800E-4FEED68B0115}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{8C579A9F-F3E7-4A67-B2C0-D4E9441BDFB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C579A9F-F3E7-4A67-B2C0-D4E9441BDFB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C579A9F-F3E7-4A67-B2C0-D4E9441BDFB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64CF98B7-F978-4E76-800E-4FEED68B0115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CF98B7-F978-4E76-800E-4FEED68B0115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CF98B7-F978-4E76-800E-4FEED68B0115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CF98B7-F978-4E76-800E-4FEED68B0115}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
