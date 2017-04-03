@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,8 +33,12 @@ namespace ch1_2_CollectionArray.algo {
         Sort()：对 ArrayList 中的元素按照阿拉伯字母表顺序进行排序。
         ToArray()：把 ArrayList 的元素复制给一个数组。
         TrimToSize()：为 ArrayList 中元素数量设置 ArrayList 的容量。
-
         */
+
+        ////java的Hashtable写法
+        //Hashtable closedge = new Hashtable();
+        //closedge.Add(“Lowcost”, int* LowcostArray = new int[length]);
+        //closedge.Add(“vex”, int* vexArray = new int[length]);
 
     }// public class ArrayListMember {
 }//namespace ch1_2_CollectionArray.algo {
